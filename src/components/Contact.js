@@ -9,6 +9,8 @@ const Contact = () => {
     message: "",
   });
 
+  const [submitted, setSubmitted] = useState(false);
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -24,8 +26,14 @@ const Contact = () => {
       .then((response) => {
         if (response.ok) {
           console.log("Email sent successfully");
+          alert("Email sent successfully");
+          setFormData({ name: "", email: "", message: "" });
+          setSubmitted(true);
         } else {
+          alert("Failed to send email");
           console.error("Failed to send email");
+          setFormData({ name: "", email: "", message: "" });
+          setSubmitted(true);
         }
       })
       .catch((error) => {
@@ -53,17 +61,20 @@ const Contact = () => {
             name="name"
             type="text"
             placeholder="Your Name"
+            value={formData.name}
             onChange={handleChange}
           />
           <input
             type="email"
             name="email"
             placeholder="Your Email"
+            value={formData.email}
             onChange={handleChange}
           />
           <textarea
             placeholder="Your Message"
             name="message"
+            value={formData.message}
             onChange={handleChange}
           />
           <button type="submit">Submit</button>
