@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function CollapsibleExample() {
   const [expanded, setExpanded] = useState(false);
