@@ -2,10 +2,22 @@ import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { useState } from "react";
 
 function CollapsibleExample() {
+  const [expanded, setExpanded] = useState(false);
+  console.log(expanded);
+
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+    <Navbar
+      onClick={() => setExpanded(!expanded)}
+      expanded={expanded}
+      collapseOnSelect
+      expand="lg"
+      bg="dark"
+      variant="dark"
+      fixed="top"
+    >
       <Container>
         <Navbar.Brand as={NavLink} to="/">
           Home
