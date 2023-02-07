@@ -33,9 +33,6 @@ const Contact = () => {
           </a>
         </p>
       </div>
-      {/* <div className="contact-page-image-section">
-        <img src={personalPhoto} alt="Mahmoud Mraisi" />
-      </div> */}
     </div>
   );
 };

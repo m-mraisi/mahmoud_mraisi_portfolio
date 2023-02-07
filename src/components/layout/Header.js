@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function CollapsibleExample() {
   const [expanded, setExpanded] = useState(false);
@@ -10,7 +10,7 @@ function CollapsibleExample() {
 
   return (
     <Navbar
-      onClick={() => setExpanded(!expanded)}
+      onToggle={() => setExpanded(!expanded)}
       expanded={expanded}
       collapseOnSelect
       expand="lg"
@@ -23,7 +23,10 @@ function CollapsibleExample() {
           Home
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
+        <Navbar.Collapse
+          id="responsive-navbar-nav"
+          onClick={() => setExpanded(!expanded)}
+        >
           <Nav className="me-auto">
             <Nav.Link as={NavLink} to="/about">
               About
