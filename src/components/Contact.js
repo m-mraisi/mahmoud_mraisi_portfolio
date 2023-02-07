@@ -1,7 +1,43 @@
+import { useState } from "react";
 import "./Contact.css";
 // import personalPhoto from "./assets/personal_image.jpg";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    // Call the backend service
+    fetch(
+      "https://mahmoud-portfolio-backend.netlify.app/.netlify/functions/index/send-email",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      }
+    )
+      .then((response) => {
+        if (response.ok) {
+          console.log("Email sent successfully");
+        } else {
+          console.error("Failed to send email");
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  const handleChange = (event) => {
+    setFormData({ ...formData, [event.target.name]: event.target.value });
+    console.log(formData);
+  };
+
   return (
     <div className="contact-page-container">
       <div className="contact-page-form">
@@ -12,10 +48,24 @@ const Contact = () => {
             mahmoudmraisi2@gmail.com
           </a>
         </p>
-        <form className="contact-form">
-          <input type="text" placeholder="Your Name" />
-          <input type="email" placeholder="Your Email" />
-          <textarea placeholder="Your Message" />
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <input
+            name="name"
+            type="text"
+            placeholder="Your Name"
+            onChange={handleChange}
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            onChange={handleChange}
+          />
+          <textarea
+            placeholder="Your Message"
+            name="message"
+            onChange={handleChange}
+          />
           <button type="submit">Submit</button>
         </form>
         <p className="page-sub-title">

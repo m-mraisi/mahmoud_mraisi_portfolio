@@ -6,7 +6,6 @@ import { useEffect, useState } from "react";
 
 function CollapsibleExample() {
   const [expanded, setExpanded] = useState(false);
-  console.log(expanded);
 
   return (
     <Navbar

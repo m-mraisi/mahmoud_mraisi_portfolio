@@ -1,7 +1,7 @@
 import "./App.css";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import { Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 import Layout from "./components/layout/Layout";
 import Skills from "./components/Skills";
 import Work from "./components/Work";
@@ -26,6 +26,7 @@ function App() {
         <Route path="/contact">
           <Contact />
         </Route>
+        <Redirect from="*" to="/" />
       </Switch>
     </Layout>
   );
