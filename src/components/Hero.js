@@ -5,6 +5,9 @@ import "./HeroPage.css";
 const HeroPage = () => {
   return (
     <div className="hero-page-container">
+      <div className="hero-page-image-section">
+        <img src={personalPhoto} alt="Mahmoud Mraisi" />
+      </div>
       <div className="hero-page-text-section">
         <h1 className="hero-page-header">Mahmoud Mraisi</h1>
         <p className="hero-page-subheader">Full Stack & Mobile Developer</p>
@@ -17,9 +20,6 @@ const HeroPage = () => {
         <NavLink className="hero-page-button" to="/about">
           Learn More
         </NavLink>
-      </div>
-      <div className="hero-page-image-section">
-        <img src={personalPhoto} alt="Mahmoud Mraisi" />
       </div>
     </div>
   );

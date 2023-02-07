@@ -4,6 +4,9 @@ import personalPhoto from "./assets/personal_image.jpg";
 const About = () => {
   return (
     <div className="about-page-container">
+      <div className="about-page-image-section">
+        <img src={personalPhoto} alt="Your Name" />
+      </div>
       <div className="about-page-text-section">
         <h1 className="about-page-header">Mahmoud Mraisi</h1>
         <p className="about-page-subheader">Full Stack & Mobile Developer</p>
@@ -18,9 +21,6 @@ const About = () => {
           knowledge further enhances my ability to develop and integrate
           data-driven solutions in web applications.
         </p>
-      </div>
-      <div className="about-page-image-section">
-        <img src={personalPhoto} alt="Your Name" />
       </div>
     </div>
   );

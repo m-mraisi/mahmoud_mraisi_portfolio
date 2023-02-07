@@ -71,6 +71,11 @@
   }
 
   @media (max-width: 992px) {
+
+    .contact-page-container{
+      justify-content: center;
+        align-items: center;
+    }
     .contact-page-form {
         justify-content: center;
         align-items: center;
