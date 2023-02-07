@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <div className="contact-page-container">
       <div className="contact-page-form">
-        <h1 className="page-title">Let's talk</h1>
+        <h1 className="page-title">Let's Connect</h1>
         <p className="page-sub-title">
           Get in touch via the form below, or by emailing{" "}
           <a className="contact-email" href="mailto:mahmoudmraisi2@gmail.com">
