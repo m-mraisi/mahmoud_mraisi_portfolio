@@ -6,6 +6,8 @@ import SociaVerse from "./assets/SociaVerse.jpg";
 import CodePanda from "./assets/CodePanda.jpg";
 import FitnessBookingApp from "./assets/FitnessBookingApp.png";
 
+//changes
+
 const Work = () => {
   const items = [
     {
