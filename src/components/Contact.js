@@ -9,8 +9,6 @@ const Contact = () => {
     message: "",
   });
 
-  const [submitted, setSubmitted] = useState(false);
-
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -28,12 +26,10 @@ const Contact = () => {
           console.log("Email sent successfully");
           alert("Email sent successfully");
           setFormData({ name: "", email: "", message: "" });
-          setSubmitted(true);
         } else {
           alert("Failed to send email");
           console.error("Failed to send email");
           setFormData({ name: "", email: "", message: "" });
-          setSubmitted(true);
         }
       })
       .catch((error) => {
