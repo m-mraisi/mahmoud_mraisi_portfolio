@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { useState } from "react";
+import resume from "../assets/Mahmoud_Mraisi_Resume.pdf";
 
 function CollapsibleExample() {
   const [expanded, setExpanded] = useState(false);
@@ -18,13 +19,17 @@ function CollapsibleExample() {
       fixed="top"
     >
       <Container>
-        <Navbar.Brand as={NavLink} to="/">
+        <Navbar.Brand
+          as={NavLink}
+          to="/"
+          onClick={() => setExpanded(expanded && !expanded)}
+        >
           Home
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse
           id="responsive-navbar-nav"
-          onClick={() => setExpanded(!expanded)}
+          onClick={() => setExpanded(expanded && !expanded)}
         >
           <Nav className="me-auto">
             <Nav.Link as={NavLink} to="/about">
@@ -38,6 +43,9 @@ function CollapsibleExample() {
             </Nav.Link>
             <Nav.Link as={NavLink} to="/contact">
               Contact
+            </Nav.Link>
+            <Nav.Link as={NavLink} to={resume} target="_blank">
+              Resume
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
