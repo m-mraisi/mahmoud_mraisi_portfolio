@@ -5,11 +5,11 @@ import { AiFillGithub } from "react-icons/ai";
 import SociaVerse from "./assets/SociaVerse.jpg";
 import CodePanda from "./assets/CodePanda.jpg";
 import FitnessBookingApp from "./assets/FitnessBookingApp.png";
+import Cancer_tumour_prediction from "./assets/Cancer_tumour_prediction.jpg";
 
 const Work = () => {
   const items = [
     {
-      id: 1,
       name: "SociaVerse",
       imgURL: SociaVerse,
       imgALT: "SociaVerse",
@@ -19,7 +19,6 @@ const Work = () => {
       gitHubURL: "https://github.com/m-mraisi/Advanced_Android_ProjectG13",
     },
     {
-      id: 2,
       name: "CodePanda - Lesson Tutorials Android app",
       imgURL: CodePanda,
       imgALT: "CodePanda",
@@ -29,7 +28,6 @@ const Work = () => {
       gitHubURL: "https://github.com/m-mraisi/Project-G10",
     },
     {
-      id: 3,
       name: "Food Order React App",
       imgURL:
         "https://user-images.githubusercontent.com/67347986/199403052-d5632264-cd3d-4e46-b907-806974360f18.png",
@@ -39,7 +37,6 @@ const Work = () => {
       gitHubURL: "https://github.com/m-mraisi/FoodOrderApp",
     },
     {
-      id: 4,
       name: "Fitness Booking Web App",
       imgURL: FitnessBookingApp,
       imgALT: "Fitness Booking Web App",
@@ -48,13 +45,20 @@ const Work = () => {
         "https://drive.google.com/file/d/1v5UbmtpOLg_IVwlciCCYJz6vC6Kfu5ik/view?usp=sharing",
       gitHubURL: "https://github.com/m-mraisi/Fitness-Booking-App",
     },
+    {
+      name: "Cancerous Tumour Prediction",
+      imgURL: Cancer_tumour_prediction,
+      imgALT: "Cancerous Tumour Prediction",
+      desc: `The Cancerous Tumour Prediction project is a machine learning solution aimed at predicting the cancerous status of a patient's tumour. The project uses the logistic regression algorithm to train a model on a "cancer.csv" dataset, which contains information about various factors that classify tumours as either cancerous or non-cancerous. The end goal is to help determine whether a patient requires surgery or not.
+
+      This project showcases the potential of machine learning in the medical field and demonstrates the ability to solve real-world problems using data science techniques. By training a model on a large dataset and making predictions about the cancerous status of tumours, the Cancerous Tumour Prediction project highlights the importance of accurate classification in the medical field and the impact that data science can have on patient outcomes.`,
+      videoURL: "",
+      gitHubURL: "https://github.com/m-mraisi/Cancerous_Tumour_Predection",
+    },
   ];
 
-  const listItems = items.map((item) => (
-    <div
-      className={item.id % 2 === 0 ? `project even` : `project odd`}
-      key={item.id}
-    >
+  const listItems = items.map((item, i) => (
+    <div className={item.id % 2 === 0 ? `project even` : `project odd`} key={i}>
       <div className="project-name">{item.name}</div>
       <div className="project-details">
         <div className="project-image">
