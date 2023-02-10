@@ -29,12 +29,16 @@
   font-size: 48px;
   font-weight: 700;
   margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+
 }
 
 .hero-page-subheader {
   font-size: 24px;
   font-weight: 400;
   margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: #819dc4;
 }
 
 .hero-page-description {
@@ -42,6 +46,7 @@
   font-weight: 400;
   line-height: 1.5;
   margin-bottom: 40px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .hero-page-button {
@@ -53,6 +58,7 @@
   color: #1e1e1e;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .hero-page-button:hover {
@@ -83,7 +89,7 @@
     text-align: center;
   }
   .hero-page-description{
-    text-align:justify;
+    text-align: justify;
 
   }
   .hero-page-image-section {
