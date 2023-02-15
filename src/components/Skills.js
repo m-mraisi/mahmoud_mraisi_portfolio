@@ -1,7 +1,11 @@
 import React from "react";
+import { useEffect } from "react";
 import "./Skills.css";
 
 const Skills = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="skills-container">
       <div className="skill">

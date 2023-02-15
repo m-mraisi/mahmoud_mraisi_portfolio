@@ -1,13 +1,15 @@
 import React from "react";
 import "./Work.css";
-import { RxVideo } from "react-icons/rx";
-import { AiFillGithub } from "react-icons/ai";
 import SociaVerse from "./assets/SociaVerse.jpg";
 import CodePanda from "./assets/CodePanda.jpg";
 import FitnessBookingApp from "./assets/FitnessBookingApp.png";
 import Cancer_tumour_prediction from "./assets/Cancer_tumour_prediction.jpg";
+import { useEffect } from "react";
 
 const Work = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const items = [
     {
       name: "SociaVerse",
@@ -18,15 +20,7 @@ const Work = () => {
         "https://drive.google.com/file/d/1R-kIMvcCMq9vfIaWqTa6_Pta0abyz56m/view?usp=sharing",
       gitHubURL: "https://github.com/m-mraisi/Advanced_Android_ProjectG13",
     },
-    {
-      name: "CodePanda - Lesson Tutorials Android app",
-      imgURL: CodePanda,
-      imgALT: "CodePanda",
-      desc: `Constructed a comprehensive lesson tutorial Android mobile app with interactive features, providing users with a seamless learning experience and enhancing their knowledge retention.`,
-      videoURL:
-        "https://drive.google.com/file/d/1t2sg9B5wJWEzEZeGEs-hvJqf49P6-LOB/view?usp=sharing",
-      gitHubURL: "https://github.com/m-mraisi/Project-G10",
-    },
+
     {
       name: "Food Order React App",
       imgURL:
@@ -35,6 +29,15 @@ const Work = () => {
       desc: `Crafted an efficient and intuitive food order web app using React and Redux, allowing restaurant patrons to smoothly explore and make orders, simplifying the ordering process and enhancing customer experience.`,
       videoURL: "",
       gitHubURL: "https://github.com/m-mraisi/FoodOrderApp",
+    },
+    {
+      name: "CodePanda - Lesson Tutorials Android app",
+      imgURL: CodePanda,
+      imgALT: "CodePanda",
+      desc: `Constructed a comprehensive lesson tutorial Android mobile app with interactive features, providing users with a seamless learning experience and enhancing their knowledge retention.`,
+      videoURL:
+        "https://drive.google.com/file/d/1t2sg9B5wJWEzEZeGEs-hvJqf49P6-LOB/view?usp=sharing",
+      gitHubURL: "https://github.com/m-mraisi/Project-G10",
     },
     {
       name: "Fitness Booking Web App",
@@ -74,7 +77,7 @@ const Work = () => {
                 href={item.videoURL}
                 className="project-link"
               >
-                <RxVideo />
+                DEMO
               </a>
             )}
             {!!item.gitHubURL && (
@@ -84,7 +87,7 @@ const Work = () => {
                 href={item.gitHubURL}
                 className="project-link"
               >
-                <AiFillGithub />
+                CODE
               </a>
             )}
           </div>

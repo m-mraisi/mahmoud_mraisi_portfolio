@@ -1,7 +1,11 @@
 import React from "react";
+import { useEffect } from "react";
 import classes from "./Reviews.module.css";
 
 const Reviews = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className={classes["reviews-container"]}>
       <h1 className={classes["reviews-title"]}>Reviews & Recommendations</h1>

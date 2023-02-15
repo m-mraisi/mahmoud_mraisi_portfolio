@@ -3,7 +3,6 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { useState } from "react";
-import resume from "../assets/Mahmoud_Mraisi_Resume.pdf";
 import "./Header.css";
 
 function CollapsibleExample() {
@@ -37,9 +36,9 @@ function CollapsibleExample() {
             <Nav.Link as={NavLink} to="/about">
               About
             </Nav.Link>
-            {/* <Nav.Link as={NavLink} to="/skills">
+            <Nav.Link as={NavLink} to="/skills">
               Skills
-            </Nav.Link> */}
+            </Nav.Link>
             <Nav.Link as={NavLink} to="/work">
               Work
             </Nav.Link>
@@ -48,9 +47,6 @@ function CollapsibleExample() {
             </Nav.Link>
             <Nav.Link as={NavLink} to="/contact">
               Contact
-            </Nav.Link>
-            <Nav.Link as={NavLink} to={resume} target="_blank">
-              Resume
             </Nav.Link>
           </Nav>
           {/* <Nav className="me-auto ">

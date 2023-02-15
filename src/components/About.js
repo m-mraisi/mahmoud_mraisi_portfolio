@@ -1,7 +1,13 @@
+import { NavLink } from "react-router-dom";
 import "./About.css";
+import { useEffect } from "react";
+import resume from "./assets/Mahmoud_Mraisi_Resume.pdf";
 import personalPhoto from "./assets/personal_image.jpg";
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="about-page-container">
       <div className="about-page-image-section">
@@ -21,6 +27,9 @@ const About = () => {
           knowledge further enhances my ability to develop and integrate
           data-driven solutions in web applications.
         </p>
+        <NavLink className="about-page-button" to={resume} target="_blank">
+          Resume
+        </NavLink>
       </div>
     </div>
   );

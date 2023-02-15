@@ -58,7 +58,6 @@
   color: #1e1e1e;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
-  font-family: 'Montserrat', sans-serif;
 }
 
 .hero-page-button:hover {
@@ -85,8 +84,10 @@
   }
 
   .hero-page-text-section {
-    width: 100%;
+    width: 80vw;
     text-align: center;
+    justify-content: center;
+    align-items: center;
   }
   .hero-page-description{
     text-align: justify;
