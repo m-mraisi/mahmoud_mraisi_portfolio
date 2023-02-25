@@ -31,10 +31,10 @@ const Work = () => {
       gitHubURL: "https://github.com/m-mraisi/FoodOrderApp",
     },
     {
-      name: "CodePanda - Lesson Tutorials Android app",
+      name: "CodePanda",
       imgURL: CodePanda,
       imgALT: "CodePanda",
-      desc: `Constructed a comprehensive lesson tutorial Android mobile app with interactive features, providing users with a seamless learning experience and enhancing their knowledge retention.`,
+      desc: `Constructed a comprehensive Academic Tutorials Android mobile app with interactive features, providing users with a seamless learning experience and enhancing their knowledge retention.`,
       videoURL:
         "https://drive.google.com/file/d/1t2sg9B5wJWEzEZeGEs-hvJqf49P6-LOB/view?usp=sharing",
       gitHubURL: "https://github.com/m-mraisi/Project-G10",
