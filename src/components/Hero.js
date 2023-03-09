@@ -12,10 +12,11 @@ const HeroPage = () => {
         <h1 className="hero-page-header">Mahmoud Mraisi</h1>
         <p className="hero-page-subheader">Full Stack & Mobile Developer</p>
         <p className="hero-page-description">
-          Experienced Software Developer with expertise in web development and
-          data integration. Skilled in ReactJS, NodeJS, Swift, Kotlin, and data
-          science with a passion for delivering efficient and effective tech
-          solutions.
+          Experienced Full Stack with expertise in MERN (MongoDB, ExpressJS,
+          ReactJS, NodeJS) stack and experienced in eCommerce, Payment, CRM, and
+          Enterprise Systems including Shopify and SAP. Passionate about fintech
+          and building data-driven software services, with high proficiency in
+          web and software development.
         </p>
         <NavLink className="hero-page-button" to="/about">
           Learn More

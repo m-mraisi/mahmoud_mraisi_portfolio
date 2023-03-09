@@ -88,6 +88,17 @@ const Contact = () => {
               alt="LinkedIn"
             />
           </a>
+          <a
+            href="https://github.com/m-mraisi"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              className="contact-github"
+              src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/github/github-original.svg"
+              alt="GitHub"
+            />
+          </a>
         </p>
       </div>
     </div>

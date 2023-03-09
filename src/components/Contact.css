@@ -31,7 +31,7 @@
     font-size: 40px;
   color: white;
   font-weight: bold;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     font-family: 'Poppins', sans-serif;
   }
 
@@ -84,6 +84,14 @@
   .contact-linkedIn{
     width: 30px;
     margin-left: 20px;
+  }
+  .contact-github{
+    width: 30px;
+    margin-left: 20px;
+    object-fit: contain;
+    background-color: white;
+    border-radius: 50px;
+    border: 1px solid #000;
   }
 
   @media (max-width: 992px) {
